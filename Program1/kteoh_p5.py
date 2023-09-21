@@ -25,7 +25,7 @@ def write(result, filename):
 
 
 def dot(vector1, vector2):
-    result = [vector1[0]+vector2[0], vector1[1]+vector2[1]]
+    result = vector1[0]*vector2[0]+vector1[1]*vector2[1]
     return result
 
 
