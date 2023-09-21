@@ -17,8 +17,8 @@ def write(matrix, filename):
 
 
 # Input
-input_file1 = input("Enter 1st file name: (remember .txt)")
-input_file2 = input("Enter 2nd file name: (remember .txt)")
+input_file1 = input("Enter first file name: (remember .txt)")
+input_file2 = input("Enter second file name: (remember .txt)")
 choose = input("Enter 0 to add, 1 to times:")
 
 choose = int(choose)
