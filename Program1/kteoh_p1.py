@@ -40,7 +40,7 @@ print()
 # End Mat2
 
 # Mat3
-value= 10
+value = 10
 
 for i in range(2):
     row = []
@@ -55,7 +55,7 @@ print()
 # End Mat3
 
 # Mat4
-value= -6
+value = -6
 
 for i in range(4):
     row = []

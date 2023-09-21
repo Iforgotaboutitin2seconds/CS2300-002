@@ -27,8 +27,8 @@ def add(matrix1, matrix2):
 
 
 # Input
-input_file1 = input("Enter 1st file name: (remember .txt)")
-input_file2 = input("Enter 2nd file name: (remember .txt)")
+input_file1 = input("Enter first file name: (remember .txt)")
+input_file2 = input("Enter second file name: (remember .txt)")
 
 # Read
 matrix1 = read(input_file1)
