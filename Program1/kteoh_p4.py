@@ -21,13 +21,11 @@ input_file1 = input("Enter first file name: (remember .txt)")
 input_file2 = input("Enter second file name: (remember .txt)")
 choose = input("Enter 0 to add, 1 to times:")
 
-choose = int(choose)
-
 # Read
 matrix1 = read(input_file1)
 matrix2 = read(input_file2)
 
-if (choose == 0):
+if (int(choose) == 0):
     result_matrix = np.add(matrix1, matrix2)
 else:
     result_matrix = np.dot(matrix1, matrix2)

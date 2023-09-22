@@ -1,0 +1,50 @@
+import numpy as np
+
+r = [-1, -2]
+s = [-3, 3]
+u = [2, -1]
+v = [3, 1]
+w = [1, 3]
+
+
+def match(vector):
+    if vector == 'r':
+        vector = r
+    if vector == 's':
+        vector = s
+    if vector == 'u':
+        vector = u
+    if vector == 'v':
+        vector = v
+    if vector == 'w':
+        vector = w
+    return vector
+
+
+def writeResult(result, filename):
+    with open(filename, 'w') as file:
+        file.write(str(result))
+
+choose = input("Enter 0 for dot, 1 for transpose: ")
+
+print("You have 5 vectors")
+print("r = " + str(r))
+print("s = " + str(s))
+print("u = " + str(u))
+print("v = " + str(v))
+print("w = " + str(w))
+
+if int(choose) == 0:
+    v1 = input("Enter the first vector: ")
+    v2 = input("Enter the second vector: ")
+    vector1 = match(v1)
+    vector2 = match(v2)
+    result = np.dot(vector1, vector2)
+
+    writeResult(result, "kteoh_p7_outD" + v1 + v2 + ".txt")
+else:
+    v3 = input("Enter the vector you want to transpose: ")
+    vector = match(v3)
+    vecotr = np.atleast_2d(vector).T
+
+    np.savetxt("kteoh_p7_outT" + v3 + ".txt", vector, fmt='%d', delimiter=' ')
