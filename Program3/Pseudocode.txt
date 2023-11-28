@@ -1,0 +1,29 @@
+Pseudocode for task1.py
+
+function solveX(D, E)
+
+    define Identiy matrix I
+
+    calculate I-D and round it to nearest hundredth by Gauss-Jordan elimination
+
+    find x by multiplying (I - D)^-1 with E
+
+    round x to nearest tenth
+
+    return x 
+
+read D and E from file
+use function solveX to find X
+print the result
+output the result into output1.txt
+
+---------------------------------------------------------------------
+
+Pseudocode for task2.py
+
+read the points
+create matrix x and y
+find x^Tx and x^Ty
+find A using the above data
+use A to get least squares regression line
+print the line and graph using 3rd party stuff
