@@ -1,4 +1,3 @@
-
 import numpy as np
 
 def point_plane_distance(point, plane):
@@ -15,7 +14,18 @@ def line_plane_intersection(line_point, line_dir, plane):
     intersection = P0 + t * v
     return intersection
 
-# Example usage
-point = (1, 2, 3)
-plane = (4, 5, 6, 7)
-print("Distance from point to plane:", point_plane_distance(point, plane))
+def process_file(file_path):
+    with open(file_path, 'r') as file:
+        for line in file:
+            nums = [float(num) for num in line.split()]
+            point = tuple(nums[:3])
+            plane = tuple(nums[3:7])
+            line_dir = tuple(nums[7:])
+            print("Processing point:", point, "and plane:", plane)
+            print("Distance from point to plane:", point_plane_distance(point, plane))
+            print("Intersection of line (through point with direction", line_dir, ") and plane:", line_plane_intersection(point, line_dir, plane))
+            print()
+
+# Example file path
+file_path = 'path_to_your_file.txt'
+process_file(file_path)
